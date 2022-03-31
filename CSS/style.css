@@ -19,24 +19,7 @@
     padding: 14px 20px;
     text-decoration: none;
 }
-.row {
-    display: -ms-flexbox 10;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-}
-.side {
-    -ms-flex: 30%;
-    flex: 30%;
-    background-color: #f1f1f1;
-    padding: 20px;
-}
-.main {
-    -ms-flex: 70%;
-    flex: 70%;
-    background-color: white;
-    padding: 20%;
-}
+
 .navbar a.right {
     float: right;
 }
@@ -44,11 +27,30 @@
     background-color: #ddd;
     color: black;
 }
+.flexContainer {
+  display: flex;
+  margin: auto;
+  padding: auto; 
+  flex-direction: row; 
+}
+.workGrid {
+    display: grid;
+}
+.item1 {
+    grid-area: myArea;
+}
+.grid-container {
+    display: grid;
+    grid-template-areas: "myArea myArea myArea myArea myArea"
+}
 .footer {
     background-image: linear-gradient(to bottom left, #0099ff 17%, #ff9900 57%);
     width: 2500px;
     height: 300px;
 }
-.skills {
-
+@media only screen and (max-width:600) {
+    .grid-container {
+        display: grid;
+        grid-template-areas: "myArea myArea myArea myArea myArea"
+}
 }
